@@ -29,7 +29,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
+  height: 80%;
   background-color: var(--clr-peach-100);
   z-index: -1;
   clip-path: url("#bg-md");
@@ -37,7 +37,6 @@ body {
 @media (max-width: 700px) {
   .container::after {
     height: 80%;
-    clip-path: url("#bg-sm");
   }
 }
 .qst {
@@ -67,11 +66,20 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 70%;
   background: var(--clr-brown-100);
   border-radius: 100vw;
+  animation: bar 210ms ease-in-out forwards;
+}
+@keyframes bar {
+  0% {
+    right: var(--bar-from);
+  }
+  100% {
+    right: var(--bar-to);
+  }
 }
 .option {
+  cursor: pointer;
   text-align: center;
   padding: 1rem 2rem;
   margin-block: 1rem;
@@ -79,6 +87,16 @@ body {
   background: var(--clr-peach-150);
   border-radius: 5px;
   box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: all 150ms ease-in;
+}
+.option:hover,
+.option:focus {
+  box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.active.option,
+.active.option {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  background: var(--clr-peach-100);
 }
 .outer-circle {
   width: 15px;
@@ -89,6 +107,9 @@ body {
   justify-self: start;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: 0px 0px 0px 2px var(--clr-brown-100) inset;
+}
+.active .outer-circle {
   box-shadow: 0px 0px 0px 4px var(--clr-brown-100) inset;
 }
 .next-box {
