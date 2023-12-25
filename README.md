@@ -1,9 +1,34 @@
-# React + Vite
+# Quiz App
 
-📌 TASK
+A simple Quiz App created by using **React**.
+[Quiz App](https://quiz-app-yadhucu.vercel.app/)
 
-Task 3: Design a Quiz App using React Check the given link for the demo video: https://drive.google.com/file/d/11L0DmJClXt_w7gUVWfNJYw8nGoA-g_DE/view?usp=drivesdk . To Submit, deploy the website using any web service.
+## features
 
-https://forms.gle/hKQ1pD58PnbinwCz6
+- user can only select one option at a time.
+- user must be selected one option otherwise the Next button won't work.
 
-(Last date of submission: 28/12/23) 📌
+## Technologies
+
+- React
+- Css
+
+## Project Setup
+
+clone this project using this command in terminal:
+
+```bash
+git clone "git@github.com:YadhuCU/quiz-app.git"
+```
+
+or
+
+```bash
+git clone "https://github.com/YadhuCU/quiz-app.git"
+```
+
+```bash
+cd quiz-app
+npm install
+npm run dev
+```
